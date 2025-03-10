@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a49eb4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    text-align: center;
+    background-color: rgb(145, 121, 141);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* add espaçamento entre os elementos */
+}
+
+
+  button, input[type="file"] {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bolder;
+    
+  }
+
+button {
+    width: 200px; /* define um tamanho fixo para os botões */
+    padding: 10px;
+    font-size: 16px;
+    cursor: help;
+}
+
+#nome{
+    width: 175px; 
+    padding: 10px;
+    font-size: 16px;
+    cursor: text;
+}

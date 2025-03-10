@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Nome de Usuário</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>ㅤNome de Usuárioㅤㅤ</h1>
+    <input type="text" id="nome" placeholder="Digite seu nome">
+    <button class="btn" onclick="gerarUsuario()">Gerar Nome </button>
+    <p id="usuarioGerado"></p>
+    <button onclick="copiarUsuario()">Copiar</button>
+
+    <script>
+        function gerarUsuario() {
+            const nome = document.getElementById('nome').value.trim();
+            if (!nome) {
+                alert('Por favor, digite um nome.');
+                return;
+            }
+            const sufixos = ['xlsy', '_pvp123', 'frefiire', 'so_capa67', '_an', '_sadboy67', '_proplayer_ff', '_natadesp', '_pro_gamer_kawaii'];
+            const sufixo = sufixos[Math.floor(Math.random() * sufixos.length)];
+            const usuario = nome.replace(/\s+/g, '_').toLowerCase() + sufixo;
+            document.getElementById('usuarioGerado').innerText = usuario;
+        }
+
+        function copiarUsuario() {
+            const usuario = document.getElementById('usuarioGerado').innerText;
+            if (!usuario) {
+                alert('Nenhum nome de usuário gerado para copiar.');
+                return;
+            }
+            navigator.clipboard.writeText(usuario).then(() => {
+                alert('Nome de usuário copiado!');
+            });
+        }
+    </script>
+</body>
+</html>
